@@ -29,14 +29,14 @@ const rating_calc = {
 		const e2 = r2 / (r1 + r2)
 		const s1 = [1, 0.5, 0]
 		const player1_rating_new = {
-			win: player1_rating + 32 * (s1[0] - e1),
-			draw: player1_rating + 32 * (s1[1] - e1),
-			lose: player1_rating + 32 * (s1[2] - e1),
+			win: Math.round(player1_rating + 32 * (s1[0] - e1)),
+			draw: Math.round(player1_rating + 32 * (s1[1] - e1)),
+			lose: Math.round(player1_rating + 32 * (s1[2] - e1)),
 		}
 		const player2_rating_new = {
-			win: player2_rating + 32 * (s1[0] - e2),
-			draw: player2_rating + 32 * (s1[1] - e2),
-			lose: player2_rating + 32 * (s1[2] - e2),
+			win: Math.round(player2_rating + 32 * (s1[0] - e2)),
+			draw: Math.round(player2_rating + 32 * (s1[1] - e2)),
+			lose: Math.round(player2_rating + 32 * (s1[2] - e2)),
 		}
 		const result = {
 			player1_rating: player1_rating_new,
